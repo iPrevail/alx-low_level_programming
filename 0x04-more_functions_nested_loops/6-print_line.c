@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_square - print square
- * @size: size of the square
+ * print_line - print line
+ * @n: size of line
  * Return: nothing
  */
-void print_square(int size)
+void print_line(int n)
 {
-	if (size <= 0)
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
@@ -15,7 +15,7 @@ void print_square(int size)
 	{
 		int i = 0;
 
-		while (i < size)
+		while (i < n)
 		{
 			_putchar('-');
 			i++;

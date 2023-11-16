@@ -10,7 +10,7 @@ void print_rev(char *s, int i)
 	if (i == 0)
 		return;
 	_putchar(s[i - 1]);
-	--;
+	i--;
 	print_rev(s, i);
 }
 
@@ -27,7 +27,7 @@ int len_recurs(char *s, int length)
 	{
 		length++;
 		s++;
-		return (len_recurs(s, len));
+		return (len_recurs(s, length));
 	}
 	return (length);
 }

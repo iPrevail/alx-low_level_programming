@@ -29,7 +29,7 @@ int compare(char *s, int n, int x)
 		else
 			return (0);
 	}
-	return (1 + compare(s, n - 1, x + 1));
+	return (1 * compare(s, n - 1, x + 1));
 }
 
 /**

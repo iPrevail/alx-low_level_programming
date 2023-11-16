@@ -36,5 +36,5 @@ else if (n == 0)
 return (0);
 }
 else
-return (aqrt_check(n, 2));
+return (sqrt_check(n, 2));
 

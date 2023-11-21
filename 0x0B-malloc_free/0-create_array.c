@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - create an arraty of chars and
+ * create_array - create an array of chars and
  * initialize it with a particular char
  * @size: an unsigned int rep size of array
  * @c: the char value to initializethe array with
@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 		if (str == NULL)
 			return (NULL);
 		for (i = 0; i < size; i++)
-			*(str + 1) = c;
+			*(str + i) = c;
 		return (str);
 	}
 	return (NULL);

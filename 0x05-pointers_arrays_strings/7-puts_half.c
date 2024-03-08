@@ -1,22 +1,24 @@
 #include "main.h"
-
 /**
- * puts_half - prints the last half of the string from the calling function
- * @str: the string to be sectioned
- */
+* puts_half - function that prints half of a string
+*
+* @str: string input parameter
+*
+* Return: Half string inputs
+*/
 void puts_half(char *str)
 {
-	int i, x;
+int a, n, len;
 
-	i = 0;
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-	x = i;
-	for (i = x / 2; i <= x - 1; i++)
-	{
-		_putchar(*(str + i));
-	}
-	_putchar('\n');
+len = 0;
+
+for (a = 0 ; str[a] != '\0' ; a++)
+len++;
+n = (len / 2);
+
+if ((len % 2) == 1)
+n = ((len + 1) / 2);
+for (a = n ; str[a] != '\0' ; a++)
+_putchar(str[a]);
+_putchar('\n');
 }

@@ -1,37 +1,30 @@
 #include "main.h"
 /**
- * _strcat - append text from one memory address
- * to text in another memory address, overwriting the '\0'
- * @src: source address
- * @dest: the destination address
- *
- * Return: destination address
- */
+* _strcat - a function that concatenates two strings
+*
+* @dest: input parameter
+*
+* @src: input parameter
+*
+* Return: always 0 (success)
+*/
 char *_strcat(char *dest, char *src)
 {
-	int i;
+int n;
+int m;
 
-	char *end = dest + _strcount(dest);
-
-	for (i = 0; src[i]  != '\0'; i++)
-		*end++ = src[i];
-	*end++ = '\0';
-
-	return (dest);
-}
-
-/**
- * _strcount - counts the characters in a string
- * @source: the string to calculate
- *
- * Return: size of the string
- */
-
-int _strcount(char *source)
+n = 0;
+while (dest[n] != '\0')
 {
-	int i;
-
-	for (i = 0; source[i] != '\0'; i++)
-		;
-	return (i);
+n++;
+}
+m = 0;
+while (src[m] != '\0')
+{
+dest[n] = src[m];
+n++;
+m++;
+}
+dest[n] = '\0';
+return (dest);
 }
